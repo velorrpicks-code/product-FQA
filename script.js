@@ -1,3 +1,4 @@
+https://velor.app.n8n.cloud/webhook/36a95220-c279-4f8b-a71f-e0ec999c281d/chat
 // Product Assistant frontend for the n8n Chat Trigger.
 // Keep this URL as your n8n production Chat URL.
 const N8N_CHAT_URL = "https://velor.app.n8n.cloud/webhook/36a95220-c279-4f8b-a71f-e0ec999c281d/chat";
