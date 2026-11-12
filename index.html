@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b0e">
+  <title>Product Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">✦</div>
+        <span>Velor<span class="brand-light">AI</span></span>
+        <button class="icon-button mobile-close" id="closeSidebar" aria-label="Close menu">×</button>
+      </div>
+
+      <button class="new-chat-button" id="newChatButton">
+        <span>＋</span> New Chat
+      </button>
+
+      <div class="history-heading">YOUR CHATS</div>
+      <div class="chat-history" id="chatHistory">
+        <div class="history-empty">Your conversations will appear here.</div>
+      </div>
+
+      <div class="sidebar-bottom">
+        <div class="profile-avatar">V</div>
+        <div class="profile-copy">
+          <strong>Product Assistant</strong>
+          <span>Shopping help</span>
+        </div>
+        <span class="status-dot" title="Ready"></span>
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="mobile-topbar">
+        <button class="icon-button" id="openSidebar" aria-label="Open menu">☰</button>
+        <span>✦ VelorAI</span>
+        <button class="icon-button" id="mobileNewChat" aria-label="New chat">＋</button>
+      </header>
+
+      <section class="welcome-screen" id="welcomeScreen">
+        <div class="welcome-star">✦</div>
+        <p class="greeting">YOUR PERSONAL SHOPPING ASSISTANT</p>
+        <h1>How can I help you<span>?</span></h1>
+        <p class="welcome-description">
+          Search products, compare prices and find the right choice for you.
+        </p>
+
+        <form class="prompt-form welcome-form" id="welcomeForm">
+          <span class="prompt-symbol">✧</span>
+          <input id="welcomeInput" type="text" placeholder="Ask about products, prices or availability..." autocomplete="off">
+          <button class="send-button" type="submit" aria-label="Send message">➤</button>
+        </form>
+
+        <div class="suggestion-divider"></div>
+        <div class="suggestion-grid">
+          <button class="suggestion" data-prompt="Search products by category or price"><span>⌕</span> Search products</button>
+          <button class="suggestion" data-prompt="Compare prices and product features"><span>♧</span> Compare prices</button>
+          <button class="suggestion" data-prompt="Check product availability"><span>▣</span> Check availability</button>
+          <button class="suggestion" data-prompt="Recommend a product for me"><span>✧</span> Product recommendations</button>
+        </div>
+        <p class="privacy-note">AI-powered shopping help · Ask a question to get started</p>
+      </section>
+
+      <section class="conversation hidden" id="conversation">
+        <div class="messages" id="messages" aria-live="polite"></div>
+      </section>
+
+      <footer class="composer-area" id="composerArea">
+        <form class="prompt-form composer-form" id="composerForm">
+          <span class="prompt-symbol">✧</span>
+          <input id="composerInput" type="text" placeholder="Message Product Assistant..." autocomplete="off">
+          <button class="send-button" type="submit" aria-label="Send message">➤</button>
+        </form>
+        <p class="composer-hint">Product Assistant can make mistakes. Check important product details before purchasing.</p>
+      </footer>
+    </main>
+  </div>
+
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
