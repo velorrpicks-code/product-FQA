@@ -109,6 +109,10 @@ h1 span { color:#a66aff; }
 .composer-area {
   position:absolute; z-index:2; bottom:0; left:0; right:0; padding:22px 24px 17px;
   background:linear-gradient(180deg,rgba(11,11,14,0),#0b0b0e 22%);
+  /* Hide the bottom composer bar while the welcome screen is visible */
+.welcome-screen:not(.hidden) ~ .composer-area {
+  display: none;
+}
 }
 .composer-form { width:min(790px,100%); margin:0 auto; }
 .composer-hint { text-align:center; color:#625f6c; font-size:10px; margin:11px 0 0; }
